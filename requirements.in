@@ -1,0 +1,26 @@
+Django==3.0.4
+psycopg2-binary==2.8.4
+envparse==0.2.0
+djangorestframework==3.11.0
+django-anymail==7.0.0
+boto3==1.12.26
+tox==3.14.5
+black==19.10b0
+invoke==1.4.1
+isort==4.3.21
+django-cors-headers==3.2.1
+django-filter==2.2.0
+factory-boy
+pytest
+pytest-django
+uwsgi
+assertpy
+freezegun
+autoflake
+Pillow
+
+# documentation
+Sphinx==3.0.3
+sphinx-rtd-theme==0.4.3
+sphinxcontrib-httpdomain==1.7.0
+sphinxcontrib-httpexample==0.10.3
