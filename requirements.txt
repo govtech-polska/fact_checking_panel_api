@@ -22,7 +22,7 @@ distlib==0.3.0            # via virtualenv
 django-anymail==7.0.0     # via -r requirements.in
 django-cors-headers==3.2.1  # via -r requirements.in
 django-filter==2.2.0      # via -r requirements.in
-django==3.0.4             # via -r requirements.in, django-anymail, django-cors-headers, django-filter, djangorestframework
+django==3.0.7             # via -r requirements.in, django-anymail, django-cors-headers, django-filter, djangorestframework
 djangorestframework==3.11.0  # via -r requirements.in
 docutils==0.15.2          # via botocore, sphinx, sphinxcontrib-httpexample
 envparse==0.2.0           # via -r requirements.in
