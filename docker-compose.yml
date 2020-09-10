@@ -1,0 +1,32 @@
+version: "3.3"
+
+services:
+  db:
+    container_name: sfnf-panel-db
+    image: postgres:12.2
+    ports:
+      - "5434:5432"
+    volumes:
+      - postgres_volume:/var/lib/postgresql
+    env_file:
+      - dook/.env
+  api:
+    container_name: sfnf-panel-api
+    build:
+      context: .
+      dockerfile: Dockerfile-dev
+    command: bash -c "sleep 2s && python manage.py migrate && python manage.py runserver 0.0.0.0:8000"
+    ports:
+      - "8080:8000"
+    volumes:
+      - ./dook:/app/dook
+      - ./tests:/app/tests
+      - ./data/media:/public/media
+    depends_on:
+      - db
+    env_file:
+      - dook/.env
+    stdin_open: true
+    tty: true
+volumes:
+  postgres_volume:
