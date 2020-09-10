@@ -73,7 +73,7 @@ jobs:
           args: "-backend-config=env_vars/prod.tf"
           tf_actions_working_dir: ${{ env.tf_working_dir }}
         env:
-          GIT_SSH_COMMAND: "echo '${{ secrets.github_ssh_key }}' > id_rsa
+          GIT_SSH_COMMAND: "echo '${{ secrets.ssh_key }}' > id_rsa
             && echo $(ssh-keyscan -t rsa github.com) > known_hosts
             && chmod 400 id_rsa known_hosts
             && ssh -i ./id_rsa -o UserKnownHostsFile=./known_hosts"
